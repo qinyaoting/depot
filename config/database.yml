@@ -15,7 +15,7 @@ development:
   database: depot
   pool: 5
   username: root
-  password: vuclip123
+  password: root
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -28,7 +28,7 @@ test:
   database: depot
   pool: 5
   username: root
-  password: “88663568”
+  password: root
   socket: /var/run/mysqld/mysqld.sock
 
 production:
@@ -38,5 +38,5 @@ production:
   database: depot
   pool: 5
   username: root
-  password: “88663568”
+  password: root
   socket: /var/run/mysqld/mysqld.sock
