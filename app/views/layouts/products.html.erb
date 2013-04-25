@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Products</title>
+  <%= stylesheet_link_tag    "depot", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<style>
+  #banner{width:100%;height: 90px; background: #EEE;}
+  #left{width:150px; float: left;background: #EFF;}
+  #main{width:600px;float: left;}
+</style>
+<body>
+<div id="banner">
+
+</div>
+<div id="left">
+  <h2>Left</h2>
+  <div>
+
+  </div>
+</div>
+
+<div id="main">
+  <% if flash[:notice] -%>
+  <%= flash[:notice] %>
+  <% end %>
+  <%= yield %>
+</div>
+
+
+</body>
+</html>

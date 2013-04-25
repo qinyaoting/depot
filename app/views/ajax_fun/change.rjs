@@ -1,0 +1,13 @@
+page['time_updated'].replace_html Time.now
+page[:time_updated].visual_effect :shake
+
+page.insert_html :top, 'the_list', '<li>King of the Hill</li>'
+page.visual_effect :highlight, 'the_list'
+
+page.show 'initially_hidden'
+
+page.delay(3) do
+  page.alert "Rails Version: " + @rails_version
+end
+
+page.remove 'item_to_remove'

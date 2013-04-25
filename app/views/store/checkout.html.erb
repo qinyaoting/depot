@@ -1,0 +1,31 @@
+<%= form_for @order, :url => {:action => :save_order} do |form| %>
+    <fieldset>
+    <legend>Please Enter Your Details</legend>
+    <table>
+    <tr>
+      <td><%= form.label :name, "Name:" %></td>
+      <td><%= form.text_field :name, :size => 40 %></td>
+    </tr>
+
+    <tr>
+      <td><%= form.label :address, "Address:" %></td>
+      <td><%= form.text_area :address, :rows => 3, :cols => 40 %></td>
+    </tr>
+
+    <tr>
+      <td><%= form.label :email, "Email:" %></td>
+      <td><%= form.text_field :email, :size => 40 %></td>
+    </tr>
+
+    <tr>
+      <td><%= form.label :pay_type, "Pay with:" %></td>
+      <td><%= form.select :pay_type,
+                        Order::PAYMENT_TYPES,
+                        :prompt => "Select a payment method" %></td>
+    </tr>
+    <tr >
+      <td colspan="2" align="center"><%= submit_tag "Place Order", :class => "submit" %></td>
+    </tr>
+    </table>
+    </fieldset>
+<% end %>
